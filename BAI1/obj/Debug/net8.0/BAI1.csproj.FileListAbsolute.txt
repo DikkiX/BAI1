@@ -1,0 +1,14 @@
+/Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/obj/Debug/net8.0/BAI1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/obj/Debug/net8.0/BAI1.AssemblyInfoInputs.cache
+/Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/obj/Debug/net8.0/BAI1.AssemblyInfo.cs
+/Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/obj/Debug/net8.0/BAI1.csproj.CoreCompileInputs.cache
+/Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/bin/Debug/net8.0/BAI1
+/Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/bin/Debug/net8.0/BAI1.deps.json
+/Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/bin/Debug/net8.0/BAI1.runtimeconfig.json
+/Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/bin/Debug/net8.0/BAI1.dll
+/Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/bin/Debug/net8.0/BAI1.pdb
+/Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/obj/Debug/net8.0/BAI1.dll
+/Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/obj/Debug/net8.0/refint/BAI1.dll
+/Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/obj/Debug/net8.0/BAI1.pdb
+/Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/obj/Debug/net8.0/BAI1.genruntimeconfig.cache
+/Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/obj/Debug/net8.0/ref/BAI1.dll
