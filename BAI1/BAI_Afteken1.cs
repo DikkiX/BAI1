@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace BAI
 {
+    /*         WCH: het is niet fout om hier al een Stack te gebruiken, maar het kan ook zonder
+        wat efficienter is. Implementeer deze manier. TIP: gebruik string
+    */
     public class BAI_Afteken1
     {
         private const string BASE27CIJFERS = "-ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -14,43 +17,44 @@ namespace BAI
         public static UInt64 Opg1aDecodeBase27(string base27getal)
         {
             UInt64 resultaat = 0;
-            // zet de hele string in een keer in een stack
-            Stack<char> stapel = new Stack<char>(base27getal);
-            // Macht van 27 die we bijhouden (start bij 1 = 27^0)
-            UInt64 macht = 1;
-            
-            // zolang er nog tekens in de stack zitten
-            while (stapel.Count > 0)
+            int i = 0;
+    
+            // loopt door de string van links naar rechts
+            while (i < base27getal.Length)
             {
-                char c = stapel.Pop(); // haalt v bovenste van de stack
-                int waarde = BASE27CIJFERS.IndexOf(c);
-
-                if (waarde < 0)
-                    throw new ArgumentException("Ongeldig teken in base-27 getal");
-                resultaat += (UInt64)waarde * macht;
-                macht *= 27; //  is keer 27
+                int waarde = BASE27CIJFERS.IndexOf(base27getal[i]);
+                resultaat = resultaat * 27 + (UInt64)waarde;
+                i++;
             }
-
+    
             return resultaat;
         }
 
+        
+        
+        /*          WCH:  Ook hier kan het zonder stack, wat efficienter is
+            implementeer deze manier. TIP: gebruik string
+        */
         public static string Opg1bEncodeBase27(UInt64 base10getal)
         {
+            // bijzondere geval voor 0
             if (base10getal == 0UL)
-                return "-"; // 
+                return "-";
 
-            Stack<char> stapel = new Stack<char>();
-
-            // Zolang er nog waarde over is
+            string resultaat = "";
+    
+            // blijft delen door 27 tot er niks meer over is
             while (base10getal > 0)
             {
-                UInt64 rest = base10getal % 27;      // neem de rest
-                stapel.Push(BASE27CIJFERS[(int)rest]); // push corresponderend teken
-                base10getal /= 27;                   // deel door 27
+                
+                UInt64 rest = base10getal % 27;
+                // zet het cijfer vooraan in de string
+                resultaat = BASE27CIJFERS[(int)rest] + resultaat;
+                // deelt door 27 voor volgende ronde
+                base10getal /= 27;
             }
-
-            // maakt string door alles van de stack af te poppen
-            return string.Concat(stapel);
+    
+            return resultaat;
         }
 
 
@@ -58,18 +62,20 @@ namespace BAI
         // ***************
         // * OPGAVE 2a/b *
         // ***************
+        
+        /*        WCH: 1. ipv een index te gebruiken kun je ook door de lijst lopen met een foreach
+                2. 2 van de 3 tests zijn gefaald, zorg dat alle tests slagen
+        */
         public static Stack<UInt64> Opdr2aWoordStack(List<string> woorden)
         {
             Stack<UInt64> stapel = new Stack<UInt64>();
     
-            // begin bij het laatste woord in de lijst
-            int index = woorden.Count - 1;
-            while (index >= 0)
+            // loopt door alle woorden in de lijst
+            foreach (string woord in woorden)
             {
-                // pakt het woord en zet om naar getal
-                UInt64 getal = Opg1aDecodeBase27(woorden[index]);
+                // zet elk woord om naar een getal
+                UInt64 getal = Opg1aDecodeBase27(woord);
                 stapel.Push(getal);
-                index--;
             }
     
             return stapel;

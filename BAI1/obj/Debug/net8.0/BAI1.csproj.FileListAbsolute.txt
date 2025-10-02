@@ -12,3 +12,4 @@
 /Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/obj/Debug/net8.0/BAI1.pdb
 /Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/obj/Debug/net8.0/BAI1.genruntimeconfig.cache
 /Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/obj/Debug/net8.0/ref/BAI1.dll
+/Users/obedado/Downloads/Aftekenopdrachten1_base27/BAI1/obj/Debug/net8.0/BAI1.sourcelink.json
